@@ -202,6 +202,10 @@ export const Main = () => {
             key={placement}
             arrowProps={{
               fill: 'rgba(255,0,0)',
+              staticOffset: undefined,
+            }}
+            floatingStyle={{
+              zIndex: 1500,
             }}
             placement={placement}
             middleware={[
