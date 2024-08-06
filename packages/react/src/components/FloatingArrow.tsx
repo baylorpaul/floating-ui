@@ -111,8 +111,8 @@ export const FloatingArrow = React.forwardRef(function FloatingArrow(
     xOffsetProp = alignment === 'end' ? 'left' : 'right';
   }
 
-  const arrowX = arrow?.x != null ? staticOffset || arrow.x : '';
-  const arrowY = arrow?.y != null ? staticOffset || arrow.y : '';
+  const arrowX = arrow?.x != null && side !== 'right' ? staticOffset || arrow.x : '';
+  const arrowY = arrow?.y != null && side !== 'bottom' ? staticOffset || arrow.y : '';
 
   const dValue =
     d ||
